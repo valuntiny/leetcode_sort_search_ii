@@ -53,4 +53,4 @@ class Solution:
 test = Solution()
 nums = [1,2]
 k = 2
-print test.topKFrequent(nums, k)
+print(test.topKFrequent(nums, k))

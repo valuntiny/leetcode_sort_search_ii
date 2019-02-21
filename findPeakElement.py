@@ -42,4 +42,4 @@ class Solution:
 
 test = Solution()
 nums = [1,2,1,3,5,6,4]
-print test.findPeakElement(nums)
+print(test.findPeakElement(nums))
