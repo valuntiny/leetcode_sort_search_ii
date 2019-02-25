@@ -25,27 +25,27 @@ class Solution:
         if not nums:
             return -1
 
-        l, r = 0, len(nums) - 1
-        mid = l + (r - l) // 2
+        low, high = 0, len(nums) - 1
 
-        while l <= r:
+        while low <= high:
+            mid = (low + high) >> 1
             if target == nums[mid]:
                 return mid
 
-            if nums[l] <= nums[mid]:
-                if nums[l] <= target <= nums[mid]:
-                    r = mid
+            if nums[low] <= nums[mid]:
+                if nums[low] <= target <= nums[mid]:
+                    high = mid - 1
                 else:
-                    l = mid + 1
+                    low = mid + 1
             else:
-                if nums[mid] <= target <= nums[r]:
-                    l = mid + 1
+                if nums[mid] <= target <= nums[high]:
+                    low = mid + 1
                 else:
-                    r = mid
+                    high = mid - 1
 
         return -1
 
 test = Solution()
 nums = [4,5,6,7,0,1,2]
-target = 0
+target = 3
 print(test.search(nums, target))
