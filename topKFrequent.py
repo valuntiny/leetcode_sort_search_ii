@@ -33,6 +33,7 @@ class Solution:
             else:
                 dict[nums[i]] = 1
 
+        # then reverse it, use frequency as the key
         for z, v in dict.items():
             if v in frq:
                 frq[v].append(z)
