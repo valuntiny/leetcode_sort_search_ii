@@ -40,7 +40,8 @@ class Solution:
         nums[low], nums[r] = nums[r], nums[low]
         return low
 
+
 test = Solution()
-nums = [3,2,3,1,2,4,5,5,6]
-k = 4
+nums = [3,2,1,5,6,4]
+k = 2
 print(test.findKthLargest(nums, k))
